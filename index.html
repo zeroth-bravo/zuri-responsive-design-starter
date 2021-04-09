@@ -10,6 +10,10 @@
 <body>
     <div class="nav-bar">
         <div class="logo">Snapshot</div>
+
+        <span class="menu-icon hamburger">&#9776;</span>
+        <span class="menu-icon close-menu">X</span>
+
         <ul class="nav-links">
             <li><a href="#">Home</a></li>
             <li><a href="#">About</a></li>
@@ -92,7 +96,7 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, sapiente. Nuleos rem!</p>
         </div>
         <div class="footer-input">
-            <input type="text" placeholder="Name"> 
+            <input type="text" placeholder="Name">
             <input type="email" placeholder="Email">
         </div>
         <div class="footer-textarea">
@@ -103,5 +107,27 @@
         </div>
         <h6>Copyright &copy; 2021 Zuri Training.</h6>
     </div>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const closeMenu = document.querySelector('.close-menu');
+        const dropdown = document.querySelector('.nav-links');
+
+        hamburger.addEventListener("click", toggleNav);
+        closeMenu.addEventListener("click", hideNav);
+
+        function toggleNav() {
+            dropdown.style.height = "13.5em";
+            hamburger.style.display = "none";
+            closeMenu.style.display = "block";
+        }
+
+        function hideNav() {
+            dropdown.style.height = "0";
+            hamburger.style.display = "block";
+            closeMenu.style.display = "none";
+        }
+    </script>
 </body>
 </html>
